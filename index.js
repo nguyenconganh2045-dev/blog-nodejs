@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 
 app.get('/', (req, res) => {
-  res.send('Chào mừng Anh và Bình');
+  res.send('Chào mừng Anh và Bình Đến với lớp học');
 });
 app.get('/gioi-thieu', (req, res) => {
     res.send(`
