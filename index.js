@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 app.use(morgan('combined'));jh
 app.get('/', (req, res) => {
-  res.send('Chào mừng Anh và Bình đến với bộ môn lập trình wed nâng cao');
+  res.send('Chào mừng Anh và Bình đến với bộ môn lập trình wed nâng cao buổi 3');
 });
 app.get('/gioi-thieu', (req, res) => {
     res.send(`
