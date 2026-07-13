@@ -2,7 +2,7 @@ const express = require('express');
 const morgan = require('morgan'); 
 const app = express();
 const port = 3000;
-app.use(morgan('combined'));jh
+app.use(morgan('combined'));
 app.get('/', (req, res) => {
   res.send('Chào mừng Anh và Bình đến với bộ môn lập trình wed nâng cao');
 });
