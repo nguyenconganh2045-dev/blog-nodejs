@@ -2,10 +2,18 @@ const express = require('express');
 const morgan = require('morgan'); 
 const app = express();
 const port = 3000;
+const { engine } = require('express-handlebars');
+// Cấp quyền truy cập cho thư mục public
+app.use(express.static('public'));
+// Cấu hình Handlebars
+app.engine('hbs', engine({ extname: '.hbs' }));
+app.set('view engine', 'hbs');
+app.set('views', './views'); // Chỉ định thư mục chứa giao diện
 app.use(morgan('combined'));
 app.get('/', (req, res) => {
-  res.send('Chào mừng Anh và Bình đến với bộ môn lập trình wed nâng cao');
+  res.render('home');
 });
+
 app.get('/gioi-thieu', (req, res) => {
     res.send(`
       <h1>Thông tin cá nhân</h1>
